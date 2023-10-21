@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 498549422}
   - component: {fileID: 498549421}
   - component: {fileID: 498549420}
+  - component: {fileID: 498549423}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -215,6 +216,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &498549423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498549419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 099ff222d632e014bb446b7319d8e507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2049563439}
+  offest: {x: 0, y: 1, z: -5}
 --- !u!1 &1343746244
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +256,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343746244}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 66214f018163db844adcb062caac2a6f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -426,6 +441,7 @@ GameObject:
   - component: {fileID: 2049563438}
   - component: {fileID: 2049563437}
   - component: {fileID: 2049563436}
+  - component: {fileID: 2049563440}
   - component: {fileID: 2049563435}
   m_Layer: 0
   m_Name: Player
@@ -446,6 +462,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0dd49b348598d2459bf07f55f1819ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forwardSpeed: 2000
+  sideWaysSpeed: 500
+  rb: {fileID: 2049563440}
 --- !u!65 &2049563436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -532,3 +551,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2049563440
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049563434}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
