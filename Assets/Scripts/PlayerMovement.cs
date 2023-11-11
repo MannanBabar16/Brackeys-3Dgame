@@ -6,10 +6,10 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField]
-    private float forwardSpeed = 200f;
+    private float forwardSpeed = 4000f;
 
     [SerializeField]
-    private float sideWaysSpeed = 500f;
+    private float sideWaysSpeed = 100f;
 
     public Rigidbody rb;
     // Start is called before the first frame update
@@ -30,12 +30,12 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKey("d"))
         {
-            rb.AddForce(sideWaysSpeed * Time.deltaTime, 0f, 0f);
+            rb.AddForce(sideWaysSpeed * Time.deltaTime, 0f, 0f,ForceMode.VelocityChange);
         }
 
         if(Input.GetKey("a")) 
         {
-            rb.AddForce((sideWaysSpeed * -1) * Time.deltaTime, 0f, 0f);
+            rb.AddForce((sideWaysSpeed * -1) * Time.deltaTime, 0f, 0f, ForceMode.VelocityChange);
         }
     }
 }
